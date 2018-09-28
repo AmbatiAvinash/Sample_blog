@@ -17,7 +17,7 @@ Create a new article by clicking on this <%= link_to 'link', new_article_path %>
         <td><%= article.price%></td>
         <td><%= link_to 'Show', article_path(article)%></td>
         <td><%= link_to 'Edit', edit_article_path(article)%></td>
-        <td><%= link_to 'Delete', article_path(article)%></td>
+        <td><%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: 'Do you want to delete the data?'}%></td>
     </tr>
 </table>
 <% end %>
